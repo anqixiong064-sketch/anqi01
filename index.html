@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XIONGANQI 熊安琪｜Brand Strategy · Creative Direction · Campaign Planning</title>
+  <meta name="description" content="XIONGANQI 熊安琪个人作品集：品牌策略、活动策划、创意方向、影像内容、KOL/KOC 合作与品牌周边设计。" />
+  <meta name="theme-color" content="#080808" />
+  <style>
+    :root{
+      --canvas:#f5f0e9;
+      --paper:#faf7f2;
+      --ink:#201d1a;
+      --muted:#746b62;
+      --quiet:#9a9086;
+      --line:rgba(32,29,26,.13);
+      --line-soft:rgba(32,29,26,.07);
+      --taupe:#7d6a58;
+      --sand:#d9cbbc;
+      --night:#171513;
+      --white:#fbf8f3;
+      --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Baskerville,Georgia,"Songti SC","Noto Serif SC",serif;
+      --sans:Inter,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--canvas);
+      color:var(--ink);
+      font-family:var(--sans);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 82% 8%, rgba(169,143,115,.10), transparent 32%),
+        radial-gradient(circle at 10% 40%, rgba(198,174,149,.10), transparent 36%);
+    }
+    a{color:inherit;text-decoration:none}
+    img,video{display:block;max-width:100%}
+    img{background:#eee7dd}
+    button{font:inherit;color:inherit;border:0;background:transparent;cursor:pointer}
+    ::selection{background:var(--ink);color:var(--white)}
+
+    [data-lang="zh"] .en,[data-lang="zh"] .lang-en,[data-lang="zh"] .about-en{display:none !important}
+    [data-lang="en"] .cn,[data-lang="en"] .lang-zh,[data-lang="en"] .about-cn{display:none !important}
+    .nav-right{display:flex;align-items:center;gap:18px}
+    .lang-switch{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid currentColor;border-radius:999px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;transition:opacity .25s ease,background .25s ease,color .25s ease}
+    .lang-switch:hover{opacity:.8}
+    .lang-switch .slash{opacity:.55}
+    .lang-switch[aria-pressed="true"]{background:rgba(255,255,255,.12)}
+    .serif{font-family:var(--serif);font-weight:400}
+    .wrap{max-width:1440px;margin:0 auto;padding-inline:44px}
+    .rule{height:1px;background:var(--line)}
+    .eyebrow{font-size:10px;line-height:1;letter-spacing:.32em;text-transform:uppercase;color:var(--quiet)}
+    .section{padding:122px 0}
+    .section-title{font:400 clamp(50px,7.2vw,112px)/.94 var(--serif);letter-spacing:-.055em;margin:18px 0 0}
+    .section-lead{max-width:500px;margin:0;font-size:14px;line-height:2;color:var(--muted)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:48px;margin-bottom:70px}
+    .fade{opacity:0;transform:translateY(18px);transition:opacity .78s ease, transform .78s ease}
+    .fade.show{opacity:1;transform:translateY(0)}
+
+    /* Navigation */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:80;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:26px 44px 22px;
+      background:linear-gradient(180deg, rgba(245,240,233,.96), rgba(245,240,233,.80), transparent);
+      backdrop-filter:blur(3px);
+      font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+    }
+    .brand{font-size:12px;letter-spacing:.32em;white-space:nowrap}
+    .links{display:flex;align-items:center;gap:28px;color:var(--muted)}
+    .links a{transition:color .25s ease}
+    .links a:hover{color:var(--ink)}
+
+    /* Hero */
+    .hero{min-height:100svh;padding:104px 0 34px}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;min-height:calc(100svh - 138px);align-items:stretch}
+    .hero-copy{display:flex;flex-direction:column;justify-content:space-between;padding:22px 0 8px}
+    .hero-title{
+      font:400 clamp(80px,12vw,178px)/.83 var(--serif);
+      letter-spacing:-.07em;
+      margin:28px 0 0;
+    }
+    .hero-title span{display:block}
+    .hero-name-cn{font:400 clamp(23px,2vw,31px)/1.4 var(--serif);letter-spacing:.12em;margin:25px 0 0;color:var(--taupe)}
+    .hero-intro{max-width:540px;margin-top:68px}
+    .hero-intro .cn{font-size:20px;line-height:1.85;letter-spacing:.02em;margin:0 0 16px}
+    .hero-intro .en{font-size:13px;line-height:2;color:var(--muted);margin:0}
+    .hero-index{display:flex;gap:32px;flex-wrap:wrap;margin-top:46px;color:var(--quiet);font-size:10px;letter-spacing:.25em;text-transform:uppercase}
+    .hero-visual{position:relative;overflow:hidden;background:#e7dfd5;min-height:660px}
+    .hero-visual video{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(.98)}
+    .hero-caption{position:absolute;right:22px;bottom:22px;left:22px;display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.65);color:rgba(255,255,255,.88);font-size:10px;letter-spacing:.22em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+    .hero-scroll{display:inline-flex;gap:12px;align-items:center;margin-top:34px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+    .hero-scroll::before{content:"";display:block;width:44px;height:1px;background:var(--muted)}
+
+    /* About */
+    .about{border-top:1px solid var(--line)}
+    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:72px}
+    .about-copy{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:46px}
+    .about-cn{font:400 clamp(23px,2.1vw,30px)/1.7 var(--serif);letter-spacing:-.02em;margin:0}
+    .about-en{font-size:14px;line-height:2.05;color:var(--muted);margin:0}
+    .practice-line{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .practice{padding:26px 24px 28px 0;margin-right:24px;border-right:1px solid var(--line)}
+    .practice:last-child{border:0;margin-right:0}
+    .practice h3{font:400 25px/1.1 var(--serif);letter-spacing:-.03em;margin:0 0 22px}
+    .practice p{font-size:13px;line-height:1.85;color:var(--muted);margin:0}
+
+    /* Projects */
+    .projects{background:var(--paper)}
+    .project{display:grid;grid-template-columns:290px minmax(400px,1fr) 340px;gap:32px;padding:44px 0;border-top:1px solid var(--line)}
+    .project:last-child{border-bottom:1px solid var(--line)}
+    .project-number{color:var(--quiet);font-size:10px;letter-spacing:.35em;text-transform:uppercase;margin-bottom:20px}
+    .project h3{font:400 clamp(42px,4vw,62px)/.96 var(--serif);letter-spacing:-.045em;margin:0 0 18px}
+    .client{font-size:11px;letter-spacing:.27em;text-transform:uppercase;color:var(--taupe)}
+    .project-image{position:relative;height:560px;overflow:hidden;background:#e6ded3}
+    .project-image img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+    .project:hover .project-image img{transform:scale(1.035)}
+    .project-details{display:flex;flex-direction:column;justify-content:space-between;gap:34px;padding-top:3px}
+    .meta{font-size:10px;letter-spacing:.27em;text-transform:uppercase;color:var(--quiet);margin-bottom:18px}
+    .project-details p{font-size:14px;line-height:2;color:var(--muted);margin:0 0 18px}
+    .project-details p.cn{font-size:15px;color:var(--ink)}
+    .role{font-size:11px;line-height:2;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);padding-top:18px;border-top:1px solid var(--line)}
+    .impact-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+    .impact-chip{padding:13px 12px;border:1px solid var(--line);font-size:11px;line-height:1.55;color:var(--muted);background:rgba(255,255,255,.44)}
+
+    /* Campaign list */
+    .campaigns{border-bottom:1px solid var(--line)}
+    .campaign-list{border-top:1px solid var(--line)}
+    .campaign-row{display:grid;grid-template-columns:72px 1fr 170px 1.25fr;gap:30px;align-items:start;padding:34px 0;border-bottom:1px solid var(--line);transition:padding .35s ease}
+    .campaign-row:hover{padding-left:12px}
+    .campaign-row .no{font-size:10px;letter-spacing:.3em;color:var(--quiet);padding-top:9px}
+    .campaign-row h3{font:400 clamp(31px,3vw,45px)/1.1 var(--serif);letter-spacing:-.04em;margin:0 0 12px}
+    .campaign-row .place{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe);padding-top:10px;line-height:1.8}
+    .campaign-row .summary p{font-size:14px;line-height:1.95;margin:0 0 10px;color:var(--ink)}
+    .campaign-row .summary .en{color:var(--muted);font-size:13px}
+    .campaign-row .summary .small-role{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--quiet);margin-top:14px}
+
+    /* Metrics */
+    .metrics{padding:100px 0;background:var(--night);color:var(--white)}
+    .metric-head{display:grid;grid-template-columns:.65fr 1.35fr;gap:50px;align-items:end;margin-bottom:58px}
+    .metrics .section-title{color:var(--white)}
+    .metrics .section-lead{color:rgba(251,248,243,.58)}
+    .metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+    .metric{border-top:1px solid rgba(251,248,243,.22);padding-top:25px}
+    .metric strong{display:block;font:400 clamp(65px,7vw,104px)/.9 var(--serif);letter-spacing:-.06em}
+    .metric p{font-size:16px;line-height:1.65;margin:15px 0 4px}
+    .metric span{font-size:12px;line-height:1.75;color:rgba(251,248,243,.5)}
+
+    /* Moving Image */
+    .archive{background:var(--paper)}
+    #merchandise{background:var(--canvas)}
+    #clients{background:var(--paper)}
+    .moving-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:16px;margin-bottom:78px}
+    .moving-grid.single-feature{display:block}
+    .moving-grid.single-feature .film.feature{display:block;width:100%;min-height:min(74vh,780px)}
+    .film{position:relative;overflow:hidden;background:#ddd1c4;min-height:360px}
+    .film.feature{grid-row:span 2;min-height:736px}
+    .film img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease;filter:saturate(.86)}
+    .film:hover img{transform:scale(1.04)}
+    .film::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(20,17,15,.68))}
+    .film-copy{position:absolute;left:22px;bottom:22px;right:22px;z-index:2;color:var(--white)}
+    .film-play{width:40px;height:40px;border:1px solid rgba(255,255,255,.65);border-radius:50%;position:relative;margin-bottom:16px}
+    .film-play::after{content:"";position:absolute;top:12px;left:16px;border-left:10px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}
+    .film-copy h3{font:400 31px/1.05 var(--serif);letter-spacing:-.035em;margin:0 0 10px}
+    .film-copy p{font-size:11px;line-height:1.7;letter-spacing:.14em;text-transform:uppercase;margin:0;color:rgba(255,255,255,.75)}
+    .gallery-title{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-bottom:30px}
+    .gallery-title h3{font:400 36px/1 var(--serif);margin:0;letter-spacing:-.035em}
+    .gallery-title span{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--quiet)}
+    .photo-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:62px;gap:16px}
+    .photo-grid figure{margin:0;overflow:hidden;background:#e8ddd1}
+    .photo-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+    .photo-grid figure:hover img{transform:scale(1.04)}
+    .photo-grid figure:nth-child(1){grid-column:1/6;grid-row:1/10}
+    .photo-grid figure:nth-child(2){grid-column:6/9;grid-row:1/7}
+    .photo-grid figure:nth-child(3){grid-column:9/13;grid-row:1/8}
+    .photo-grid figure:nth-child(4){grid-column:6/10;grid-row:7/14}
+    .photo-grid figure:nth-child(5){grid-column:10/13;grid-row:8/14}
+    .photo-grid figure:nth-child(6){grid-column:1/4;grid-row:10/16}
+    .photo-grid figure:nth-child(7){grid-column:4/6;grid-row:10/16}
+
+    /* Merchandise */
+    .merch-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end;margin-bottom:58px}
+    .merch-copy p{font-size:15px;line-height:2;color:var(--muted);margin:25px 0 22px;max-width:650px}
+    .merch-role{font-size:10px;letter-spacing:.22em;line-height:2;text-transform:uppercase;color:var(--taupe)}
+    .merch-grid{display:grid;grid-template-columns:1.25fr .7fr .7fr;grid-template-rows:420px 330px;gap:16px}
+    .merch-grid figure{margin:0;overflow:hidden;background:#e7ded2}
+    .merch-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+    .merch-grid figure:hover img{transform:scale(1.04)}
+    .merch-grid .poster{grid-row:1/3}
+    .merch-grid .wide{grid-column:2/4}
+
+    /* KOL */
+    .collabs{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .collab-intro{display:grid;grid-template-columns:.84fr 1.16fr;gap:80px;align-items:end;margin-bottom:58px}
+    .collab-copy{font-size:15px;line-height:2;color:var(--muted);margin:0}
+    .collab-meta{display:flex;gap:38px;margin-top:34px}
+    .collab-meta strong{display:block;font:400 50px/1 var(--serif);letter-spacing:-.04em}
+    .collab-meta span{display:block;margin-top:9px;color:var(--quiet);font-size:10px;letter-spacing:.2em;text-transform:uppercase;line-height:1.65}
+    .collab-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .collab-grid figure{margin:0;aspect-ratio:3/4;overflow:hidden;background:#e6ddd3}
+    .collab-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease;filter:saturate(.92)}
+    .collab-grid figure:hover img{transform:scale(1.04)}
+
+    /* Clients and contact */
+    .clients-grid{display:grid;grid-template-columns:.6fr 1.4fr;gap:70px;align-items:start}
+    .client-list{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding-top:8px}
+    .client-group{border-top:1px solid var(--line);padding-top:19px}
+    .client-group h3{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--quiet);margin:0 0 27px}
+    .client-group p{font:400 31px/1.65 var(--serif);letter-spacing:-.02em;margin:0}
+    .contact{background:var(--night);color:var(--white)}
+    .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:end}
+    .contact-title{font:400 clamp(74px,10vw,155px)/.84 var(--serif);letter-spacing:-.065em;margin:18px 0 0}
+    .contact-side{display:grid;gap:34px}
+    .contact-line{padding-top:18px;border-top:1px solid rgba(251,248,243,.22)}
+    .contact .eyebrow{color:rgba(251,248,243,.46)}
+    .contact-line a,.wechat-id{display:block;font:400 clamp(25px,3vw,38px)/1.3 var(--serif);margin-top:18px;letter-spacing:-.02em}
+    .contact-line small{display:block;color:rgba(251,248,243,.48);font-size:12px;line-height:1.8;margin-top:10px}
+    .wechat-row{display:flex;gap:22px;align-items:end;justify-content:space-between}
+    .qr-thumb{width:112px;height:112px;padding:8px;background:#fff}
+    .qr-thumb img{width:100%;height:100%;object-fit:contain;background:#fff}
+    .button{display:inline-flex;align-items:center;gap:12px;margin-top:20px;padding:14px 21px;border:1px solid rgba(251,248,243,.34);font-size:10px;letter-spacing:.23em;text-transform:uppercase;transition:background .25s ease,color .25s ease}
+    .button:hover{background:var(--white);color:var(--night)}
+    .copyright{margin-top:88px;display:flex;justify-content:space-between;gap:20px;color:rgba(251,248,243,.38);font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+
+    /* Modal */
+    .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(15,12,10,.76);padding:24px}
+    .modal.open{display:flex}
+    .modal-card{position:relative;width:min(430px,100%);background:var(--paper);padding:34px}
+    .modal-card .title{font:400 40px/1 var(--serif);letter-spacing:-.04em;margin:0 0 12px}
+    .modal-card .desc{font-size:13px;line-height:1.9;color:var(--muted);margin:0}
+    .close{position:absolute;right:17px;top:11px;font-size:28px;color:var(--muted)}
+    .qr-large{margin:26px 0 20px;background:#fff;padding:12px;border:1px solid var(--line)}
+    .qr-large img{width:100%;height:auto;object-fit:contain;background:#fff}
+    .copy-line{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:15px;gap:10px}
+    .copy-line span{font-size:14px;letter-spacing:.08em}
+    .copy{padding:10px 14px;border:1px solid var(--line);font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+    .video-modal .modal-card{background:transparent;padding:0;width:auto}
+    .video-modal video{max-width:min(88vw,560px);max-height:87vh;background:#000}
+    .video-modal .close{right:-8px;top:-44px;color:var(--white)}
+
+    @media (max-width:1150px){
+      .hero-grid,.about-grid,.merch-head,.collab-intro,.clients-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-visual{min-height:580px}
+      .practice-line{grid-template-columns:repeat(2,1fr)}
+      .practice:nth-child(2){border-right:0;margin-right:0}
+      .practice:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .project{grid-template-columns:1fr;gap:26px}
+      .project-image{height:min(72vw,560px)}
+      .campaign-row{grid-template-columns:52px 1fr;gap:22px}
+      .campaign-row .place,.campaign-row .summary{grid-column:2}
+      .metric-grid{grid-template-columns:repeat(2,1fr)}
+      .moving-grid{grid-template-columns:1fr 1fr}
+      .film.feature{grid-column:1/3;min-height:650px}
+      .merch-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+      .merch-grid .poster{grid-column:1/3;grid-row:auto;max-height:850px}
+      .merch-grid .wide{grid-column:1/3}
+      .collab-grid{grid-template-columns:repeat(4,1fr)}
+    }
+    @media (max-width:760px){
+      .wrap{padding-inline:20px}
+      .nav{padding:18px 20px 16px;align-items:flex-start;gap:18px;background:rgba(245,240,233,.95)}
+      .brand{font-size:10px}
+      .links{display:none}
+      .nav-right{margin-left:auto}
+      .lang-switch{padding:8px 10px;font-size:9px;letter-spacing:.16em}
+      .hero{padding-top:70px}
+      .hero-grid{gap:38px;min-height:auto}
+      .hero-copy{padding-top:34px}
+      .hero-intro{margin-top:38px}
+      .hero-visual{min-height:70vh}
+      .section{padding:88px 0}
+      .section-head{display:block;margin-bottom:44px}
+      .section-lead{margin-top:24px}
+      .about-copy{grid-template-columns:1fr;gap:24px}
+      .practice-line{grid-template-columns:1fr}
+      .practice{margin-right:0;border-right:0;border-bottom:1px solid var(--line)!important}
+      .practice:last-child{border-bottom:0!important}
+      .impact-chips{grid-template-columns:1fr}
+      .metric-head{grid-template-columns:1fr;gap:26px}
+      .metric-grid{grid-template-columns:1fr}
+      .moving-grid{grid-template-columns:1fr}
+      .film,.film.feature{grid-column:auto;min-height:420px}
+      .photo-grid{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:10px}
+      .photo-grid figure:nth-child(n){grid-column:auto;grid-row:auto;aspect-ratio:3/4}
+      .photo-grid figure:first-child{grid-column:1/3;aspect-ratio:4/5}
+      .merch-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      .merch-grid figure{aspect-ratio:3/4}
+      .merch-grid .poster{grid-column:1/3;aspect-ratio:3/4}
+      .merch-grid .wide{grid-column:1/3;aspect-ratio:4/3}
+      .collab-meta{gap:22px}
+      .collab-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+      .client-list{grid-template-columns:1fr;gap:34px}
+      .wechat-row{flex-direction:column;align-items:flex-start}
+      .copyright{display:block;line-height:2.2}
+    }
+  </style>
+  <style id="monochrome-fusion">
+    /* Monochrome editorial fusion: the contrast of the earlier site with the restraint of the minimal-art edition. */
+    :root{
+      --canvas:#f2ece4;
+      --paper:#faf6ef;
+      --ink:#101010;
+      --muted:#656565;
+      --quiet:#8d8d89;
+      --line:rgba(16,16,16,.15);
+      --line-soft:rgba(16,16,16,.07);
+      --taupe:#3a3a38;
+      --sand:#ddd2c4;
+      --night:#080808;
+      --white:#fbf7f1;
+    }
+    body{background:var(--canvas);color:var(--ink)}
+    body::before{
+      background:
+        radial-gradient(circle at 84% 7%,rgba(0,0,0,.035),transparent 31%),
+        radial-gradient(circle at 8% 45%,rgba(0,0,0,.026),transparent 38%);
+    }
+    img{background:#ededeb}
+    ::selection{background:#111;color:#fff}
+    .wrap{max-width:1480px;padding-inline:48px}
+    .eyebrow{color:var(--quiet)}
+    .section{padding:130px 0}
+    .section-title{letter-spacing:-.065em}
+
+    /* Transparent navigation over the cinematic first frame. */
+    .nav{
+      color:#fff;
+      mix-blend-mode:difference;
+      background:transparent;
+      backdrop-filter:none;
+      padding:28px 48px 24px;
+    }
+    .links{color:inherit;opacity:.68}
+    .links a{transition:opacity .24s ease}
+    .links a:hover{color:inherit;opacity:1}
+
+    /* Full-bleed black-and-white hero with minimal typographic structure. */
+    .hero{
+      position:relative;
+      min-height:100svh;
+      padding:0;
+      overflow:hidden;
+      background:#070707;
+      color:var(--white);
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:1;
+      background:
+        linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.5) 42%,rgba(0,0,0,.28) 68%,rgba(0,0,0,.5) 100%),
+        linear-gradient(180deg,rgba(0,0,0,.34) 0%,rgba(0,0,0,.03) 44%,rgba(0,0,0,.8) 100%);
+      pointer-events:none;
+    }
+    .hero .wrap{max-width:none;padding:0}
+    .hero-grid{display:block;min-height:100svh}
+    .hero-copy{
+      position:relative;
+      z-index:3;
+      min-height:100svh;
+      width:min(1460px,100%);
+      margin:0 auto;
+      padding:112px 48px 44px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .hero-copy > .fade:last-child{max-width:580px}
+    .hero-title{
+      font-size:clamp(96px,17.5vw,260px);
+      line-height:.78;
+      letter-spacing:-.085em;
+      margin:34px 0 0;
+    }
+    .hero-name-cn{color:rgba(255,255,255,.58);letter-spacing:.2em}
+    .hero-intro{margin-top:0;max-width:560px}
+    .hero-intro .cn{color:rgba(255,255,255,.94)}
+    .hero-intro .en{color:rgba(255,255,255,.58)}
+    .hero-index{color:rgba(255,255,255,.47);margin-top:44px}
+    .hero-scroll{color:rgba(255,255,255,.6)}
+    .hero-scroll::before{background:rgba(255,255,255,.55)}
+    .hero-visual{position:absolute;inset:0;z-index:0;min-height:0;background:#050505}
+    .hero-visual video{
+      width:100%;height:100%;object-fit:cover;
+      opacity:1;
+      filter:grayscale(100%) contrast(1.08) brightness(.58);
+    }
+    .hero-caption{
+      z-index:2;
+      left:auto;right:48px;bottom:42px;
+      width:min(445px,35vw);
+      color:rgba(255,255,255,.64);
+      border-color:rgba(255,255,255,.32);
+      text-shadow:none;
+    }
+
+    /* Quiet white editorial body. */
+    .about{background:var(--paper);border-top:0}
+    .practice-line{border-color:var(--line)}
+    .practice{border-color:var(--line)}
+
+    /* Black gallery band echoes the first monochrome layout. */
+    .projects{background:var(--night);color:var(--white)}
+    .projects .section-lead,.projects .project-details p{color:rgba(250,250,247,.58)}
+    .projects .project-details p.cn{color:rgba(250,250,247,.94)}
+    .projects .eyebrow,.projects .project-number{color:rgba(250,250,247,.43)}
+    .projects .client{color:rgba(250,250,247,.62)}
+    .projects .project,.projects .project:last-child{border-color:rgba(250,250,247,.19)}
+    .projects .role{color:rgba(250,250,247,.55);border-color:rgba(250,250,247,.2)}
+    .projects .impact-chip{
+      border-color:rgba(250,250,247,.2);
+      color:rgba(250,250,247,.65);
+      background:transparent;
+    }
+    .project-image{background:#161616}
+    .project-image img{
+      filter:grayscale(100%) contrast(1.04);
+      transition:transform .9s ease,filter .55s ease;
+    }
+    .project:hover .project-image img{filter:grayscale(0%) contrast(1)}
+
+    /* Paper archive with strict lines and generous white space. */
+    .campaigns{background:var(--paper);border-bottom:1px solid var(--line)}
+    .campaign-row:hover{padding-left:0}
+    .campaign-row h3{letter-spacing:-.055em}
+
+    /* Results remain a dark interruption, now neutral rather than warm. */
+    .metrics{background:#0b0b0b;color:var(--white)}
+
+    /* Image archive: lightly desaturated until viewed. */
+    .archive{background:var(--paper)}
+    #merchandise{background:var(--canvas)}
+    #clients{background:var(--paper)}
+    .film{background:#111}
+    .film img{filter:grayscale(68%) contrast(1.02);transition:transform .9s ease,filter .45s ease}
+    .film:hover img{filter:grayscale(0%) contrast(1)}
+    .photo-grid figure{background:#ededeb}
+    .photo-grid img{filter:grayscale(24%);transition:transform .9s ease,filter .45s ease}
+    .photo-grid figure:hover img{filter:grayscale(0%)}
+
+    #merchandise{background:var(--canvas)}
+    .merch-grid figure{background:#e8e8e5}
+    .merch-grid img{filter:saturate(.86);transition:transform .9s ease,filter .45s ease}
+    .merch-grid figure:hover img{filter:saturate(1)}
+
+    /* Creator gallery in a restrained black exhibition room. */
+    .collabs{
+      background:#0a0a0a;
+      color:var(--white);
+      border-color:rgba(250,250,247,.16);
+    }
+    .collabs .eyebrow{color:rgba(250,250,247,.44)}
+    .collabs .collab-copy{color:rgba(250,250,247,.6)}
+    .collabs .collab-meta span{color:rgba(250,250,247,.44)}
+    .collab-grid figure{background:#161616}
+    .collab-grid img{filter:grayscale(55%) contrast(1.02);transition:transform .9s ease,filter .45s ease}
+    .collab-grid figure:hover img{filter:grayscale(0%) contrast(1)}
+
+    #clients{background:var(--paper)}
+    .contact{background:#070707}
+    .button{border-color:rgba(250,250,247,.36)}
+    .button:hover{background:var(--white);color:#070707}
+    .modal{background:rgba(0,0,0,.84)}
+    .modal-card{background:#fff}
+
+    @media (max-width:1150px){
+      .hero-copy{padding-inline:40px}
+      .hero-caption{right:40px;width:min(420px,42vw)}
+    }
+    @media (max-width:760px){
+      .wrap{padding-inline:20px}
+      .section{padding:92px 0}
+      .nav{
+        padding:20px;
+        background:transparent;
+        color:#fff;
+        mix-blend-mode:difference;
+      }
+      .hero{padding:0;min-height:100svh}
+      .hero-grid{min-height:100svh}
+      .hero-copy{min-height:100svh;padding:90px 20px 40px}
+      .hero-title{font-size:clamp(74px,27vw,120px);letter-spacing:-.08em;margin-top:28px}
+      .hero-name-cn{font-size:22px}
+      .hero-intro{margin-top:48px}
+      .hero-caption{display:none}
+      .hero-visual{min-height:0}
+      .hero-visual video{object-position:60% center;filter:grayscale(100%) contrast(1.08) brightness(.46)}
+      .projects .project-image img,.film img,.collab-grid img{filter:none}
+    }
+  </style>
+
+
+  <style id="project-links">
+    .project-link,.campaign-link{color:inherit;text-decoration:none}
+    .project-link{cursor:pointer}
+    .project-link:focus-visible,.campaign-link:focus-visible{outline:1px solid currentColor;outline-offset:10px}
+    .project-link .project-image::after{content:"View Project / 查看项目  ↗";position:absolute;left:22px;right:22px;bottom:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.58);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(5px);transition:opacity .35s ease,transform .35s ease}
+    .project-link:hover .project-image::after{opacity:1;transform:none}
+    .open-project{display:inline-flex;align-items:center;gap:12px;margin-top:22px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(250,250,247,.7)}
+    .open-project::before{content:"";display:block;width:34px;height:1px;background:currentColor}
+    .campaign-link{position:relative}
+    .campaign-link::after{content:"View Project / 查看项目 ↗";position:absolute;right:0;bottom:16px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--quiet);opacity:0;transition:opacity .28s ease}
+    .campaign-link:hover::after{opacity:1}
+    .archive-action{display:inline-flex;align-items:center;gap:14px;margin-top:24px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);transition:color .25s ease}
+    .archive-action::before{content:"";width:34px;height:1px;background:currentColor}
+    .archive-action:hover{color:var(--ink)}
+    .collabs .archive-action{color:rgba(250,250,247,.62)}
+    .collabs .archive-action:hover{color:var(--white)}
+    .gallery-title .archive-action{margin-top:0}
+    @media(max-width:760px){.project-link .project-image::after{opacity:1;transform:none}.campaign-link::after{position:static;display:block;margin-top:20px;opacity:1}.gallery-title{align-items:flex-start;flex-direction:column}.gallery-title .archive-action{margin-top:10px}}
+  </style>
+
+
+  <style id="cover-hero-update">
+    /* Cover-style homepage inspired by the supplied editorial reference. */
+    .nav{
+      color:#fff;
+      mix-blend-mode:normal;
+      background:transparent;
+      backdrop-filter:none;
+      padding:27px 44px 0;
+      align-items:flex-start;
+    }
+    .brand{display:flex;flex-direction:column;gap:5px;font-size:0;letter-spacing:0;line-height:1}
+    .brand-name{font-size:22px;line-height:1;font-weight:760;letter-spacing:.005em}
+    .brand-cn{font-family:var(--serif);font-size:13px;line-height:1.15;font-weight:400;letter-spacing:.26em;opacity:.94;margin-top:2px}
+    .brand-sub{font-size:9px;line-height:1.2;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.72;margin-top:2px}
+    .nav-right{gap:34px;align-items:center}
+    .links{gap:36px;color:#fff;opacity:1}
+    .links a{font-size:13px;font-weight:650;letter-spacing:.2em;color:rgba(255,255,255,.94)}
+    .links a:hover{opacity:.64;color:#fff}
+    .lang-switch{
+      width:54px;height:54px;justify-content:center;padding:0;
+      border:1px solid rgba(255,255,255,.78);border-radius:0;
+      font-size:13px;font-weight:650;letter-spacing:.15em;
+      background:transparent;color:#fff;
+    }
+    .lang-switch:hover{background:rgba(255,255,255,.12);opacity:1}
+    .lang-switch[aria-pressed="true"]{background:rgba(255,255,255,.12)}
+    .lang-switch .slash,.lang-switch .full-label{display:none}
+
+    .hero{min-height:100svh;padding:0;background:#10100f;color:#fff;position:relative;overflow:hidden}
+    .hero::after{
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.06) 34%,rgba(0,0,0,.54) 100%),
+        linear-gradient(90deg,rgba(0,0,0,.32) 0%,rgba(0,0,0,.08) 56%,rgba(0,0,0,.24) 100%);
+    }
+    .hero .wrap{max-width:none;padding:0}
+    .hero-bg{position:absolute;inset:0;z-index:0;margin:0;background:#161513}
+    .hero-bg video{width:100%;height:100%;object-fit:cover;object-position:center center;filter:none;opacity:1}
+    .hero-cover{
+      position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;
+      min-height:100svh;padding:142px 44px 38px;
+    }
+    .hero-meta{display:grid;grid-template-columns:1fr auto;align-items:center;color:rgba(255,255,255,.9);font-size:12px;font-weight:650;letter-spacing:.23em;text-transform:uppercase}
+    .hero-meta span:last-child{justify-self:end}
+    .cover-content{display:flex;flex-direction:column;justify-content:flex-end;flex:1;padding-top:86px}
+    .cover-kicker{font-size:15px;line-height:1.5;font-weight:600;letter-spacing:.13em;margin:0 0 23px;color:rgba(255,255,255,.94)}
+    .cover-title{
+      font-family:Inter,"Helvetica Neue",Arial,"PingFang SC",sans-serif;
+      font-size:clamp(112px,17.2vw,228px);font-weight:820;line-height:.79;letter-spacing:-.086em;
+      margin:0;color:#fff;text-transform:uppercase;
+    }
+    .cover-title span{display:block}
+    .cover-bottom{
+      display:grid;grid-template-columns:minmax(280px,1fr) 80px;gap:38px;align-items:end;
+      margin-top:70px;padding-top:54px;border-top:1px solid rgba(255,255,255,.62);
+    }
+    .cover-statement{max-width:860px;font-size:18px;line-height:1.75;letter-spacing:.02em;margin:0;color:rgba(255,255,255,.9)}
+    .cover-scroll{
+      justify-self:end;width:70px;height:70px;border:1px solid rgba(255,255,255,.7);border-radius:50%;
+      display:flex;align-items:center;justify-content:center;color:#fff;transition:background .26s ease,transform .26s ease;
+    }
+    .cover-scroll::before{display:none}
+    .cover-scroll svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.5;fill:none}
+    .cover-scroll:hover{background:rgba(255,255,255,.12);transform:translateY(2px)}
+
+    @media (max-width:980px){
+      .nav{padding:23px 24px 0}.links{gap:20px}.links a{font-size:11px;letter-spacing:.16em}
+      .nav-right{gap:22px}.hero-cover{padding:128px 24px 30px}
+      .cover-title{font-size:clamp(86px,19vw,156px)}
+    }
+    @media (max-width:760px){
+      .nav{padding:19px 20px 0;align-items:flex-start;color:#fff;mix-blend-mode:normal}
+      .brand-name{font-size:18px}.brand-cn{font-size:12px;letter-spacing:.22em}.brand-sub{font-size:8px}
+      .nav-right{gap:12px}.links{display:none}
+      .lang-switch{width:46px;height:46px;font-size:11px}
+      .hero-cover{min-height:100svh;padding:98px 20px 24px}
+      .hero-meta{font-size:9px;letter-spacing:.16em;gap:12px}
+      .cover-content{padding-top:42px}
+      .cover-kicker{font-size:12px;margin-bottom:18px;letter-spacing:.1em}
+      .cover-title{font-size:clamp(62px,25vw,108px);line-height:.83;letter-spacing:-.085em}
+      .cover-bottom{grid-template-columns:1fr 54px;gap:18px;padding-top:24px;margin-top:38px}
+      .cover-statement{font-size:14px;line-height:1.75}
+      .cover-scroll{width:54px;height:54px}.cover-scroll svg{width:18px;height:18px}
+      .hero-bg video{object-position:58% center}
+    }
+  </style>
+
+
+  <style id="final-framework-content-update">
+    /* 01 — Commercial campaign archive: proposal cover and narrative shown together. */
+    .campaign-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:52px 32px;border-top:1px solid var(--line);padding-top:42px}
+    .campaign-row{display:grid;grid-template-columns:46px minmax(0,1fr);gap:0 18px;align-items:start;padding:0 0 38px;border-bottom:1px solid var(--line);transition:none}
+    .campaign-row:hover{padding-left:0}
+    .campaign-row .no{grid-column:1;grid-row:1 / span 2;padding-top:7px;font-size:10px;letter-spacing:.3em;color:var(--quiet)}
+    .campaign-cover{position:relative;grid-column:2;margin:0 0 27px;aspect-ratio:16/9;overflow:hidden;background:#e9e5df}
+    .campaign-cover img{width:100%;height:100%;object-fit:cover;filter:none;transition:transform .72s cubic-bezier(.22,.61,.36,1)}
+    .campaign-row:hover .campaign-cover img{transform:scale(1.02)}
+    .campaign-cover figcaption{position:absolute;right:14px;bottom:13px;padding:8px 10px;background:rgba(250,246,239,.92);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+    .campaign-body{grid-column:2}
+    .campaign-meta{display:flex;justify-content:space-between;align-items:start;gap:22px;margin-bottom:25px}
+    .campaign-row h3{font-size:clamp(30px,3vw,43px);margin:0 0 14px;letter-spacing:-.055em}
+    .campaign-row .place{text-align:right;flex:0 0 auto;padding-top:8px}
+    .campaign-row .summary p{font-size:14px;line-height:1.95;margin:0 0 11px;color:var(--ink)}
+    .campaign-row .summary .en{color:var(--muted);font-size:13px}
+    .campaign-row .summary .small-role{padding-top:16px;margin-top:19px;border-top:1px solid var(--line-soft)}
+    .campaign-link::after{right:0;bottom:12px}
+
+    /* 02 — Colour is preserved throughout; hover remains a restrained scale movement only. */
+    .project-image img,.film img,.photo-grid img,.merch-grid img,.collab-grid img{filter:none !important;transition:transform .72s cubic-bezier(.22,.61,.36,1) !important}
+    .project:hover .project-image img,.film:hover img,.photo-grid figure:hover img,.merch-grid figure:hover img,.collab-grid figure:hover img{transform:scale(1.02);filter:none !important}
+
+    /* 03 — Visible creator identification for every KOL / KOC image. */
+    .collab-grid{gap:28px 12px}
+    .collab-grid figure{margin:0;aspect-ratio:auto;overflow:visible;background:transparent}
+    .collab-photo{aspect-ratio:3/4;overflow:hidden;background:#161616}
+    .collab-grid img{width:100%;height:100%;object-fit:cover}
+    .collab-grid figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding-top:12px;border-top:1px solid rgba(251,248,243,.16);margin-top:10px;color:rgba(251,248,243,.9);font-size:12px;line-height:1.5;letter-spacing:.04em}
+    .collab-grid figcaption em{font-style:normal;color:rgba(251,248,243,.44);font-size:9px;letter-spacing:.18em;text-transform:uppercase}
+
+    @media (max-width:1150px){.campaign-list{grid-template-columns:1fr;gap:42px}.campaign-row{max-width:850px}.collab-grid{gap:22px 12px}}
+    @media (max-width:760px){.campaign-list{padding-top:30px}.campaign-row{grid-template-columns:32px 1fr;gap:0 10px;padding-bottom:30px}.campaign-cover{margin-bottom:21px}.campaign-meta{display:block}.campaign-row .place{text-align:left;margin-top:18px}.campaign-link::after{margin-left:42px}.collab-grid{grid-template-columns:repeat(2,1fr);gap:23px 10px}.collab-grid figcaption{display:block;font-size:11px;padding-top:9px;margin-top:8px}.collab-grid figcaption em{display:block;margin-top:4px}}
+  </style>
+
+
+  <style id="brand-poster-series-update">
+    /* Update 04 — ii sense campaign poster study; added inside the existing Editorial Mood chapter. */
+    .poster-series{margin:10px 0 96px;padding-top:40px;border-top:1px solid var(--line)}
+    .poster-series-head{display:grid;grid-template-columns:minmax(280px,.86fr) minmax(350px,1fr);gap:70px;align-items:end;margin-bottom:44px}
+    .poster-series .eyebrow{margin:0 0 19px}
+    .poster-series h3{font:400 clamp(42px,4.8vw,66px)/.98 var(--serif);letter-spacing:-.06em;margin:0}
+    .poster-series-copy{max-width:560px;justify-self:end}
+    .poster-series-copy p{margin:0;color:var(--muted);font-size:14px;line-height:2.05}
+    .poster-series-meta{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:10px;line-height:1.8;letter-spacing:.25em;text-transform:uppercase;color:var(--quiet)}
+    .poster-board{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(12,58px);gap:16px}
+    .poster-card{position:relative;margin:0;overflow:hidden;background:#e8ddd1}
+    .poster-card img{width:100%;height:100%;object-fit:cover;filter:none;transition:transform .72s cubic-bezier(.22,.61,.36,1)}
+    .poster-card:hover img{transform:scale(1.02)}
+    .poster-card--texture{grid-column:1/5;grid-row:1/10}
+    .poster-card--pastel{grid-column:5/9;grid-row:2/13}
+    .poster-card--dark{grid-column:9/13;grid-row:1/12}
+    .poster-card figcaption{position:absolute;z-index:1;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:end;gap:12px;padding:52px 18px 17px;background:linear-gradient(transparent,rgba(12,11,10,.48));font-size:9px;line-height:1.7;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.94)}
+    .poster-card figcaption span:last-child{text-align:right;color:rgba(255,255,255,.7)}
+    .poster-note{grid-column:1/5;grid-row:10/13;display:flex;flex-direction:column;justify-content:space-between;padding:21px 22px 20px;border:1px solid var(--line);background:rgba(250,246,239,.7)}
+    .poster-note small{font-size:9px;line-height:1.8;letter-spacing:.27em;text-transform:uppercase;color:var(--quiet)}
+    .poster-note p{font:400 23px/1.5 var(--serif);letter-spacing:-.025em;color:var(--ink);margin:22px 0 0}
+    @media (max-width:980px){
+      .poster-series-head{grid-template-columns:1fr;gap:26px}
+      .poster-series-copy{justify-self:start}
+      .poster-board{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:12px}
+      .poster-card--texture{grid-column:1/3;grid-row:auto;aspect-ratio:4/5}
+      .poster-card--pastel,.poster-card--dark{grid-column:auto;grid-row:auto;aspect-ratio:3/4}
+      .poster-note{grid-column:1/3;grid-row:auto;min-height:185px}
+    }
+    @media (max-width:760px){
+      .poster-series{margin-bottom:64px;padding-top:31px}
+      .poster-series-head{margin-bottom:30px}
+      .poster-series h3{font-size:clamp(38px,13vw,52px)}
+      .poster-board{display:block}
+      .poster-card{aspect-ratio:3/4;margin-bottom:10px}
+      .poster-card--texture{aspect-ratio:4/5}
+      .poster-note{min-height:174px;margin-top:17px}
+      .poster-note p{font-size:21px}
+    }
+  </style>
+
+</head>
+<body data-lang="zh">
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="XIONGANQI 熊安琪 home">
+      <span class="brand-name">XIONGANQI</span>
+      <span class="brand-cn">熊安琪</span>
+      <span class="brand-sub" data-zh="品牌策略" data-en="Brand Strategy">品牌策略</span>
+    </a>
+    <div class="nav-right">
+      <nav class="links" aria-label="Primary Navigation">
+        <a href="#work" data-zh="作品" data-en="Work">作品</a>
+        <a href="#about" data-zh="关于" data-en="About">关于</a>
+        <a href="#archive" data-zh="影像" data-en="Journal">影像</a>
+        <a href="experience.html" data-zh="经历" data-en="Experience">经历</a>
+        <a href="#contact" data-zh="联系" data-en="Contact">联系</a>
+      </nav>
+      <button class="lang-switch" id="langToggle" aria-label="切换语言 / Switch language" aria-pressed="false"><span id="langLabel">EN</span><span class="full-label">中文 / English</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <figure class="hero-bg" aria-label="品牌影像背景视频">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/video-brand-media-01.jpg">
+          <source src="assets/video-brand-media-01.mp4" type="video/mp4" />
+        </video>
+      </figure>
+      <div class="hero-cover">
+        <div class="hero-meta fade">
+          <span>Portfolio</span>
+          <span>2023–2026</span>
+        </div>
+        <div class="cover-content">
+          <div class="fade">
+            <p class="cover-kicker" data-zh="品牌策划 · 活动策划 · 创意方向" data-en="Brand Strategy · Campaign Planning · Creative Direction">品牌策划 · 活动策划 · 创意方向</p>
+            <h1 class="cover-title"><span>XIONG</span><span>ANQI</span></h1>
+          </div>
+          <div class="cover-bottom fade">
+            <p class="cover-statement" data-zh="将初心与商业空间的想象，翻译成有温度、有质感、也有传播力的品牌体验。" data-en="Translating ideas for brands and commercial spaces into experiences with warmth, texture and communicative power.">将初心与商业空间的想象，翻译成有温度、有质感、也有传播力的品牌体验。</p>
+            <a class="cover-scroll" href="#about" aria-label="向下浏览 / Scroll down">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17M6.5 14.5L12 20l5.5-5.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div class="fade">
+          <div class="eyebrow" data-zh="关于" data-en="About">关于</div>
+          <h2 class="section-title" data-zh="以氛围承载<br>策略表达" data-en="Strategy<br>with<br>Atmosphere.">以氛围承载<br>策略表达</h2>
+        </div>
+        <div class="fade">
+          <p class="about-cn">我关注品牌如何被看见、被体验、被记住。通过品牌策略、活动策划、空间体验、视觉内容与商业增长路径，把抽象的品牌概念转化为可进入、可传播、可转化的真实场景。</p>
+          <div class="about-copy">
+            <p class="about-en">I work across brand strategy, spatial campaign planning, editorial content and consumer experience — translating abstract brand language into moments that audiences can enter, share and remember.</p>
+            <p class="about-en">My portfolio spans fashion retail pop-ups, commercial campaigns, product launches, brand photography, moving image, merchandise design and creator collaboration.</p>
+          </div>
+          <div class="practice-line">
+            <article class="practice"><h3 data-zh="品牌策略" data-en="Brand Strategy">品牌策略</h3><p data-zh="品牌定位、传播策略与叙事框架。" data-en="Positioning, communication strategy and narrative systems.">品牌定位、传播策略与叙事框架。</p></article>
+            <article class="practice"><h3 data-zh="活动策划" data-en="Campaign Planning">活动策划</h3><p data-zh="主题概念、活动机制与现场路径。" data-en="Theme concepts, audience interaction and on-site journey design.">主题概念、活动机制与现场路径。</p></article>
+            <article class="practice"><h3 data-zh="创意方向" data-en="Creative Direction">创意方向</h3><p data-zh="视觉氛围、影像内容与编辑表达。" data-en="Visual atmosphere, moving image and editorial expression.">视觉氛围、影像内容与编辑表达。</p></article>
+            <article class="practice"><h3 data-zh="增长与社群" data-en="Growth & Community">增长与社群</h3><p data-zh="KOL/KOC 拓展、转化与复购增长。" data-en="Creator partnerships, conversion and repeat-purchase growth.">KOL/KOC 拓展、转化与复购增长。</p></article>
+          </div>
+          <a class="archive-action" href="experience.html"><span class="lang-zh">查看个人工作经历</span><span class="lang-en">View Experience</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="work">
+      <div class="wrap">
+        <div class="section-head fade">
+          <div>
+            <div class="eyebrow" data-zh="精选项目" data-en="Selected Work">精选项目</div>
+            <h2 class="section-title" data-zh="零售快闪<br>系列项目" data-en="Retail Pop-up<br>Series">零售快闪<br>系列项目</h2>
+          </div>
+          <p class="section-lead" data-zh="围绕品牌季节性叙事，以空间、材质、光线与用户互动，完成从品牌表达至线下体验及商业转化的完整链路。" data-en="Retail experiences shaped through narrative, material, light and consumer participation — extending brand expression into offline experience and conversion.">围绕品牌季节性叙事，以空间、材质、光线与用户互动，完成从品牌表达至线下体验及商业转化的完整链路。</p>
+        </div>
+
+        <a class="project fade project-link" href="projects/mirage-to-moon.html">
+          <div>
+            <div class="project-number">01 / 04</div>
+            <h3>Mirage To<br>Moon POP-UP</h3>
+            <div class="client">ii sense × 栋梁</div>
+          </div>
+          <div class="project-image"><img loading="lazy" src="assets/liang-cover.jpg" alt="ii sense × 栋梁 Mirage To Moon POP-UP"></div>
+          <div class="project-details">
+            <div>
+              <div class="meta">Beijing · 2023</div>
+              <p class="cn">围绕 ii sense AW/22「幻景徙月」系列主题，将游牧、迁徙、大漠光影与记忆中的故乡转译为线下 POP-UP 空间体验。</p>
+              <p class="en">A spatial retail campaign translating migration, desert light and remembered homeland into an immersive brand atmosphere.</p>
+            </div>
+            <div class="role">Campaign Planning / Creative Direction / Spatial Experience Coordination<span class="open-project"><span class="lang-zh">查看项目</span><span class="lang-en">View Project</span></span></div>
+          </div>
+        </a>
+
+        <a class="project fade project-link" href="projects/pale-views.html">
+          <div>
+            <div class="project-number">02 / 04</div>
+            <h3>Pale Views<br>POP-UP</h3>
+            <div class="client">ii sense × SOLSOL</div>
+          </div>
+          <div class="project-image"><img loading="lazy" src="assets/solsol-cover.jpg" alt="ii sense × SOLSOL Pale Views POP-UP"></div>
+          <div class="project-details">
+            <div>
+              <div class="meta">Hangzhou · 2024.09</div>
+              <p class="cn">以 ii sense AW/23「Pale Views」为视觉与叙事核心，通过雾蓝橱窗、半透明纱幕、花艺装置与镜面反射构建朦胧错视的线下体验。</p>
+              <p class="en">A poetic retail environment built through translucent layers, pale colour, florals and reflection.</p>
+            </div>
+            <div class="role">Campaign Planning / Creative Direction / Spatial Experience Coordination<span class="open-project"><span class="lang-zh">查看项目</span><span class="lang-en">View Project</span></span></div>
+          </div>
+        </a>
+
+        <a class="project fade project-link" href="projects/soft-retail-experience.html">
+          <div>
+            <div class="project-number">03 / 04</div>
+            <h3>Soft Retail<br>Experience</h3>
+            <div class="client">ii sense × intherange</div>
+          </div>
+          <div class="project-image"><img loading="lazy" src="assets/intherange-cover.jpg" alt="ii sense × intherange Soft Retail Experience POP-UP"></div>
+          <div class="project-details">
+            <div>
+              <div class="meta">Ningbo · 2025</div>
+              <p class="cn">以柔粉色调、轻纱帘幕、自然植栽与服装陈列构建亲密型零售场景，通过影像、花艺物料与参与机制强化品牌连接。</p>
+              <p class="en">A soft retail pop-up designed around fitting, participation and visual storytelling.</p>
+              <div class="impact-chips">
+                <div class="impact-chip">200+ 到店人数<br>Store visitors</div>
+                <div class="impact-chip">+11% 销售转化率<br>Sales conversion</div>
+                <div class="impact-chip">50+ 活动参与者<br>Participants</div>
+                <div class="impact-chip">30+ KOL / KOC<br>Collaborations</div>
+              </div>
+            </div>
+            <div class="role">Campaign Planning / Creative Direction / Consumer Experience Coordination<span class="open-project"><span class="lang-zh">查看项目</span><span class="lang-en">View Project</span></span></div>
+          </div>
+        </a>
+
+        <a class="project fade project-link" href="projects/spiritual-voyage.html">
+          <div>
+            <div class="project-number">04 / 04</div>
+            <h3>Spiritual<br>Voyage POP-UP</h3>
+            <div class="client">ii sense × mirage²⁵</div>
+          </div>
+          <div class="project-image"><img loading="lazy" src="assets/spiritual-voyage-cover.jpg" alt="ii sense × mirage²⁵ Spiritual Voyage POP-UP 杭州现场"></div>
+          <div class="project-details">
+            <div>
+              <div class="meta">Hangzhou · 2026.04–05</div>
+              <p class="cn">围绕 ii sense SS/26「Spiritual Voyage」主题，以蕾丝纹样、柔光帷幕、花艺装置与复古建筑质感，将品牌叙事展开为杭州期间限定零售体验。</p>
+              <p class="en">An SS/26 pop-up translating lace, soft drapery, floral installation and heritage interiors into an intimate retail voyage in Hangzhou.</p>
+            </div>
+            <div class="role">Campaign Planning / Creative Direction / Spatial Experience Coordination<span class="open-project"><span class="lang-zh">查看项目</span><span class="lang-en">View Project</span></span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section campaigns" id="campaigns">
+      <div class="wrap">
+        <div class="section-head fade">
+          <div>
+            <div class="eyebrow" data-zh="商业活动策划" data-en="Commercial Campaign Planning">商业活动策划</div>
+            <h2 class="section-title" data-zh="商业策划<br>项目档案" data-en="Campaign<br>Archive">商业策划<br>项目档案</h2>
+          </div>
+          <p class="section-lead" data-zh="从企业团建到商业空间节庆，从游戏新品发布到文化主题活动，以策略框架与体验流程推动传播落地。" data-en="From team-building programs and retail festivals to launch events and culture-led activations — strategy frameworks and experience flow shape execution.">从企业团建到商业空间节庆，从游戏新品发布到文化主题活动，以策略框架与体验流程推动传播落地。</p>
+        </div>
+        <div class="campaign-list">
+          <a class="campaign-row fade campaign-link" href="projects/outdoor-team-building.html">
+            <div class="no">04</div>
+            <figure class="campaign-cover"><img loading="lazy" src="assets/campaign-previews/tofflon-01.jpg" alt="Tofflon 东富龙户外团建计划策划案首图"><figcaption data-zh="策划案首图" data-en="Proposal Cover">策划案首图</figcaption></figure>
+            <div class="campaign-body">
+              <div class="campaign-meta"><div><h3>Outdoor Team<br>Building Plan</h3><div class="client">Tofflon 东富龙</div></div><div class="place">Shanghai<br>2026.05</div></div>
+              <div class="summary"><p class="cn">以“匠行不止，共赴湖光”为主题，打造结合自然徒步、趣味闯关、湖畔社交与团队凝聚的户外团建方案。</p><p class="en">An outdoor team-building experience combining nature, interaction and collective connection.</p><div class="small-role">Campaign Planning / Event Concept / Experience Design</div></div>
+            </div>
+          </a>
+          <a class="campaign-row fade campaign-link" href="projects/green-life-festival.html">
+            <div class="no">05</div>
+            <figure class="campaign-cover"><img loading="lazy" src="assets/campaign-previews/zhongtai-01.jpg" alt="中泰广场绿茵森活节策划案首图"><figcaption data-zh="策划案首图" data-en="Proposal Cover">策划案首图</figcaption></figure>
+            <div class="campaign-body">
+              <div class="campaign-meta"><div><h3>绿茵森活节</h3><div class="client">中泰广场</div></div><div class="place">Hangzhou<br>2025.06</div></div>
+              <div class="summary"><p class="cn">以“把班味踢走，把夏天踢热”为传播主张，借势足球热点与城市社交需求，构建商业空间周末体验。</p><p class="en">A summer retail festival shaped around light movement, football culture and urban gathering.</p><div class="small-role">Campaign Planning / Theme Development / Consumer Experience</div></div>
+            </div>
+          </a>
+          <a class="campaign-row fade campaign-link" href="projects/sanguosha-launch.html">
+            <div class="no">06</div>
+            <figure class="campaign-cover"><img loading="lazy" src="assets/campaign-previews/sanguosha-01.jpg" alt="三国杀新品发布会策划案首图"><figcaption data-zh="策划案首图" data-en="Proposal Cover">策划案首图</figcaption></figure>
+            <div class="campaign-body">
+              <div class="campaign-meta"><div><h3>Offline Product<br>Launch Event</h3><div class="client">三国杀</div></div><div class="place">Hangzhou<br>2026.05</div></div>
+              <div class="summary"><p class="cn">围绕《正面对决：三国杀集换式卡牌》新品发布，将签到、试玩、发布、答疑与晚宴转化为沉浸式流程。</p><p class="en">A product-launch journey integrating play, presentation, conversation and hospitality.</p><div class="small-role">Campaign Planning / Event Strategy / Experience Flow</div></div>
+            </div>
+          </a>
+          <a class="campaign-row fade campaign-link" href="projects/oriental-summer-season.html">
+            <div class="no">07</div>
+            <figure class="campaign-cover"><img loading="lazy" src="assets/campaign-previews/oriental-01.jpg" alt="凯德星贸东方妙趣季策划案首图"><figcaption data-zh="策划案首图" data-en="Proposal Cover">策划案首图</figcaption></figure>
+            <div class="campaign-body">
+              <div class="campaign-meta"><div><h3>东方妙趣季</h3><div class="client">凯德·星贸</div></div><div class="place">Shanghai<br>2026.05–06</div></div>
+              <div class="summary"><p class="cn">以“山野入场，趣游初夏”为主题，围绕东方美学、自然山野与趣味共创打造商业空间活动体验。</p><p class="en">A cultural summer event translating Eastern aesthetics and nature-inspired leisure into retail space.</p><div class="small-role">Campaign Planning / Activity Structure / Visual Experience</div></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics" id="impact">
+      <div class="wrap">
+        <div class="metric-head fade">
+          <div>
+            <div class="eyebrow" style="color:rgba(251,248,243,.45)" data-zh="成果" data-en="Impact">成果</div>
+            <h2 class="section-title" data-zh="可量化的<br>项目价值" data-en="Measured<br>Value">可量化的<br>项目价值</h2>
+          </div>
+          <p class="section-lead" data-zh="我希望创意与审美最终能够落在可验证的结果之上：合作效率、传播连接、复购与线上销售增长。" data-en="Atmosphere and strategy should ultimately resolve into visible business outcomes — efficiency, connection, repeat purchase and sales growth.">我希望创意与审美最终能够落在可验证的结果之上：合作效率、传播连接、复购与线上销售增长。</p>
+        </div>
+        <div class="metric-grid">
+          <div class="metric fade"><strong>35%</strong><p class="lang-zh">合作转化率提升至 35%</p><p class="lang-en">Conversion rate increased from 25% to 35%</p></div>
+          <div class="metric fade"><strong>100+</strong><p class="lang-zh">拓展并维护 KOL / KOC</p><p class="lang-en">Creator relationships developed and maintained</p></div>
+          <div class="metric fade"><strong>20%</strong><p class="lang-zh">精细化运营推动复购率提升</p><p class="lang-en">Increase in repeat purchase rate</p></div>
+          <div class="metric fade"><strong>40%</strong><p class="lang-zh">累计带动品牌线上销售额提升</p><p class="lang-en">Increase in online sales</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section archive" id="archive">
+      <div class="wrap">
+        <div class="section-head fade">
+          <div>
+            <div class="eyebrow" data-zh="摄影与动态影像" data-en="Photography & Moving Image">摄影与动态影像</div>
+            <h2 class="section-title" data-zh="品牌影像与<br>视觉氛围" data-en="Editorial<br>Mood">品牌影像与<br>视觉氛围</h2>
+          </div>
+          <div><p class="section-lead" data-zh="围绕 ii sense 的季节性视觉表达，完成品牌摄影与媒体宣传视频的拍摄、剪辑与氛围塑造。" data-en="Seasonal visual storytelling for ii sense through brand photography, moving image and editorial mood creation.">围绕 ii sense 的季节性视觉表达，完成品牌摄影与媒体宣传视频的拍摄、剪辑与氛围塑造。</p><a class="archive-action" href="projects/moving-image.html"><span class="lang-zh">查看动态影像</span><span class="lang-en">View Moving Image</span></a></div>
+        </div>
+        <div class="moving-grid single-feature">
+          <button class="film feature fade" data-video="assets/video-magazine.mp4" aria-label="播放 ii sense 与上城士及蔡健雅合作视频">
+            <img loading="lazy" src="assets/magazine-cover.jpg" alt="ii sense × 上城士 × 蔡健雅媒体视频封面">
+            <div class="film-copy"><div class="film-play"></div><h3>ii sense × 上城士 × 蔡健雅</h3><p>Media Video · Shooting / Editing / Editorial Mood</p></div>
+          </button>
+        </div>
+
+        <div class="poster-series">
+          <div class="poster-series-head fade">
+            <div>
+              <div class="eyebrow" data-zh="品牌海报拍摄 / 03 FRAME SERIES" data-en="CAMPAIGN POSTER STUDY / 03 FRAME SERIES">品牌海报拍摄 / 03 FRAME SERIES</div>
+              <h3 data-zh="ii sense<br>柔光影像序列" data-en="ii sense<br>Soft Light Series">ii sense<br>柔光影像序列</h3>
+            </div>
+            <div class="poster-series-copy">
+              <p data-zh="以羊绒触感、穿着状态与室内自然光为线索，将三幅品牌海报组织为由材质细节、柔粉造型至深色廓形递进的编辑式视觉章节。" data-en="An editorial progression from tactile knitwear detail to pastel styling and a charcoal silhouette, guided by natural indoor light and the quiet sensibility of ii sense.">以羊绒触感、穿着状态与室内自然光为线索，将三幅品牌海报组织为由材质细节、柔粉造型至深色廓形递进的编辑式视觉章节。</p>
+              <div class="poster-series-meta">Photography · Styling · Editorial Atmosphere</div>
+            </div>
+          </div>
+          <div class="poster-board" aria-label="ii sense 品牌海报拍摄系列">
+            <figure class="poster-card poster-card--texture fade">
+              <img loading="lazy" src="assets/brand-poster-shoot-01.jpg" alt="ii sense 暖光羊绒织物细节品牌海报">
+              <figcaption><span>01</span><span data-zh="质感 / 暖光" data-en="Texture / Warm Light">质感 / 暖光</span></figcaption>
+            </figure>
+            <figure class="poster-card poster-card--pastel fade">
+              <img loading="lazy" src="assets/brand-poster-shoot-02.jpg" alt="ii sense 柔粉与浅黄色造型品牌海报">
+              <figcaption><span>02</span><span data-zh="柔粉造型" data-en="Pastel Styling">柔粉造型</span></figcaption>
+            </figure>
+            <figure class="poster-card poster-card--dark fade">
+              <img loading="lazy" src="assets/brand-poster-shoot-03.jpg" alt="ii sense 深灰色廓形造型品牌海报">
+              <figcaption><span>03</span><span data-zh="静谧廓形" data-en="Quiet Silhouette">静谧廓形</span></figcaption>
+            </figure>
+            <aside class="poster-note fade">
+              <small>Campaign Imagery / ii sense / 2026</small>
+              <p data-zh="柔软材质在光线里，形成品牌的感知语言。" data-en="Soft material becomes a sensory language through light.">柔软材质在光线里，形成品牌的感知语言。</p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="gallery-title fade"><h3 data-zh="品牌摄影" data-en="Brand Photography">品牌摄影</h3><a class="archive-action" href="projects/brand-photography.html"><span class="lang-zh">查看项目</span><span class="lang-en">View Project</span></a></div>
+        <div class="photo-grid">
+          <figure class="fade"><img loading="lazy" src="assets/photo-01.jpg" alt="ii sense 品牌摄影 01"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/photo-02.jpg" alt="ii sense 品牌摄影 02"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/photo-03.jpg" alt="ii sense 品牌摄影 03"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/photo-04.jpg" alt="ii sense 品牌摄影 04"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/photo-05.jpg" alt="ii sense 品牌摄影 05"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/photo-06.jpg" alt="ii sense 品牌摄影 06"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/photo-07.jpg" alt="ii sense 品牌摄影 07"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="merchandise">
+      <div class="wrap">
+        <div class="merch-head fade">
+          <div>
+            <div class="eyebrow" data-zh="周边产品设计" data-en="Product & Merchandise Design">周边产品设计</div>
+            <h2 class="section-title">ii le soir<br>Spiritual Holiday</h2>
+          </div>
+          <div class="merch-copy">
+            <p>为 ii le soir 设计品牌周边系列，将品牌图形与色彩语言延展至丝巾、托特包、手机配件、家居服与生活器物中，建立完整而轻盈的品牌生活方式体验。</p>
+            <div class="merch-role">Merchandise Design / Product Visual Development / Brand Extension Design</div><a class="archive-action" href="projects/spiritual-holiday.html"><span class="lang-zh">查看项目</span><span class="lang-en">View Project</span></a>
+          </div>
+        </div>
+        <div class="merch-grid">
+          <figure class="poster fade"><img loading="lazy" src="assets/merch-cover.jpg" alt="ii le soir Spiritual Holiday 海报"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/merch-01.jpg" alt="ii le soir scarf"></figure>
+          <figure class="fade"><img loading="lazy" src="assets/merch-02.jpg" alt="ii le soir phone accessory"></figure>
+          <figure class="wide fade"><img loading="lazy" src="assets/merch-04.jpg" alt="ii le soir tote bag"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section collabs" id="collabs">
+      <div class="wrap">
+        <div class="collab-intro fade">
+          <div>
+            <div class="eyebrow" data-zh="KOL / KOC 达人合作" data-en="KOL / KOC Collaborations">KOL / KOC 达人合作</div>
+            <h2 class="section-title" data-zh="社群连接<br>与传播影响" data-en="Community<br>& Influence">社群连接<br>与传播影响</h2>
+          </div>
+          <div>
+            <p class="collab-copy" data-zh="合作样本覆盖时尚穿搭、生活方式与旅途场景，通过品牌调性匹配、内容共创与关系维护，让品牌在更真实的用户语境中被持续看见与转化。" data-en="Selected creator collaborations spanning styling, lifestyle and travel context — building long-term brand visibility through fit, co-creation and relationship maintenance.">合作样本覆盖时尚穿搭、生活方式与旅途场景，通过品牌调性匹配、内容共创与关系维护，让品牌在更真实的用户语境中被持续看见与转化。</p>
+            <a class="archive-action" href="projects/creator-collaborations.html"><span class="lang-zh">查看合作档案</span><span class="lang-en">View Collaboration Archive</span></a>
+            <div class="collab-meta">
+              <div><strong>100+</strong><span>Relationships<br>Developed</span></div>
+              <div><strong>18</strong><span>Selected<br>Visual Samples</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="collab-grid">
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-01.jpg" alt="纯兮 — ii sense KOL / KOC 合作内容"></div><figcaption><span>纯兮</span><em>9.4w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-02.jpg" alt="当然是当 — ii sense KOL / KOC 合作内容"></div><figcaption><span>当然是当</span><em>70.6w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-03.jpg" alt="隔壁老王 — ii sense KOL / KOC 合作内容"></div><figcaption><span>隔壁老王</span><em>34.2w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-04.jpg" alt="顾嘉悦 melody — ii sense KOL / KOC 合作内容"></div><figcaption><span>顾嘉悦 melody</span><em>16.7w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-05.jpg" alt="蒯仔 — ii sense KOL / KOC 合作内容"></div><figcaption><span>蒯仔</span><em>11.6w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-06.jpg" alt="马思纯 — ii sense 明星合作内容"></div><figcaption><span>马思纯</span><em>明星</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-07.jpg" alt="马思纯 — ii sense 明星合作内容"></div><figcaption><span>马思纯</span><em>明星</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-08.jpg" alt="沙粒丫 — ii sense KOL / KOC 合作内容"></div><figcaption><span>沙粒丫</span><em>5.8w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-09.png" alt="苏饼干渣渣 — ii sense KOL / KOC 合作内容"></div><figcaption><span>苏饼干渣渣</span><em>2.8w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-10.jpg" alt="吴昕 — ii sense KOL / KOC 合作内容"></div><figcaption><span>吴昕</span><em>730.4w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-11.jpg" alt="aikoko — ii sense KOL / KOC 合作内容"></div><figcaption><span>aikoko</span><em>83.5w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-12.jpg" alt="chowei — ii sense KOL / KOC 合作内容"></div><figcaption><span>chowei</span><em>44.6w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-13.png" alt="irisquan — ii sense KOL / KOC 合作内容"></div><figcaption><span>irisquan</span><em>44.1w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-14.jpg" alt="itsyuye — ii sense KOL / KOC 合作内容"></div><figcaption><span>itsyuye</span><em>16.1w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-15.jpg" alt="kathrynisw — ii sense KOL / KOC 合作内容"></div><figcaption><span>kathrynisw</span><em>7.8w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-16.png" alt="kathrynisw — ii sense KOL / KOC 合作内容"></div><figcaption><span>kathrynisw</span><em>7.8w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-17.jpg" alt="mamingme — ii sense KOL / KOC 合作内容"></div><figcaption><span>mamingme</span><em>7w 粉丝</em></figcaption></figure>
+          <figure class="fade"><div class="collab-photo"><img loading="lazy" src="assets/kol-18.jpg" alt="masami — ii sense KOL / KOC 合作内容"></div><figcaption><span>masami</span><em>28.1w 粉丝</em></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clients">
+      <div class="wrap clients-grid fade">
+        <div>
+          <div class="eyebrow" data-zh="精选客户" data-en="Selected Clients">精选客户</div>
+          <h2 class="section-title" data-zh="客户与合作" data-en="Clients">客户与合作</h2>
+        </div>
+        <div class="client-list">
+          <div class="client-group"><h3>Fashion & Lifestyle</h3><p>ii sense<br>II ENCORE<br>ii le soir</p></div>
+          <div class="client-group"><h3>Commercial & Culture</h3><p>凯德·星贸<br>中泰广场<br>天下网商</p></div>
+          <div class="client-group"><h3>Corporate & Entertainment</h3><p>东富龙科技<br>三国杀</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="fade">
+          <div class="eyebrow" data-zh="联系" data-en="Contact">联系</div>
+          <h2 class="contact-title" data-zh="欢迎与我<br>联系。" data-en="Let’s<br>Connect.">欢迎与我<br>联系。</h2>
+        </div>
+        <div class="contact-side fade">
+          <div class="contact-line">
+            <div class="eyebrow" data-zh="邮箱" data-en="Email">邮箱</div>
+            <a href="mailto:xionganqi0815@163.com">xionganqi0815@163.com</a>
+            <small data-zh="欢迎品牌合作、活动策划、创意方向与视觉内容项目洽谈。" data-en="Available for brand collaborations, campaign planning and visual projects.">欢迎品牌合作、活动策划、创意方向与视觉内容项目洽谈。</small>
+          </div>
+          <div class="contact-line">
+            <div class="eyebrow" data-zh="微信" data-en="WeChat">微信</div>
+            <div class="wechat-row">
+              <div>
+                <span class="wechat-id">Expecto6atronum</span>
+                <button class="button" id="wechatBtn" data-zh="查看二维码 ↗" data-en="View QR Code ↗">查看二维码 ↗</button>
+              </div>
+              <div class="qr-thumb"><img loading="lazy" src="assets/wechat-qr.jpg" alt="微信二维码"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright"><span>© XIONGANQI 熊安琪</span><span data-zh="品牌策略 · 活动策划 · 创意方向" data-en="Brand Strategy · Campaign Planning · Creative Direction">品牌策略 · 活动策划 · 创意方向</span></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="wechatModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" data-close aria-label="关闭">×</button>
+      <h2 class="title" data-zh="微信联系" data-en="Connect on WeChat">微信联系</h2>
+      <p class="desc" data-zh="扫码添加微信，或复制下方微信号。" data-en="Scan the code or copy the WeChat ID below.">扫码添加微信，或复制下方微信号。</p>
+      <div class="qr-large"><img src="assets/wechat-qr.jpg" alt="微信二维码"></div>
+      <div class="copy-line"><span id="wechatId">Expecto6atronum</span><button class="copy" id="copyWechat" data-zh="复制" data-en="Copy">复制</button></div>
+    </div>
+  </div>
+
+  <div class="modal video-modal" id="videoModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" data-close-video aria-label="关闭视频">×</button>
+      <video id="modalVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.10 });
+    document.querySelectorAll('.fade').forEach((element) => observer.observe(element));
+
+    const langToggle = document.getElementById('langToggle');
+    const langStorageKey = 'xionganqi-home-lang';
+    function applyLanguage(lang){
+      document.body.dataset.lang = lang;
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-zh][data-en]').forEach((el) => {
+        el.innerHTML = lang === 'zh' ? el.dataset.zh : el.dataset.en;
+      });
+      if (langToggle) langToggle.setAttribute('aria-pressed', String(lang === 'en'));
+      const langLabel = document.getElementById('langLabel');
+      if (langLabel) langLabel.textContent = lang === 'zh' ? 'EN' : '中';
+      try { localStorage.setItem(langStorageKey, lang); } catch (error) {}
+    }
+    let currentLang = 'zh';
+    try { currentLang = localStorage.getItem(langStorageKey) || 'zh'; } catch (error) {}
+    applyLanguage(currentLang);
+    langToggle?.addEventListener('click', () => {
+      currentLang = document.body.dataset.lang === 'zh' ? 'en' : 'zh';
+      applyLanguage(currentLang);
+    });
+
+    const wechatModal = document.getElementById('wechatModal');
+    const wechatBtn = document.getElementById('wechatBtn');
+    wechatBtn.addEventListener('click', () => wechatModal.classList.add('open'));
+    document.querySelector('[data-close]').addEventListener('click', () => wechatModal.classList.remove('open'));
+    wechatModal.addEventListener('click', (event) => {
+      if (event.target === wechatModal) wechatModal.classList.remove('open');
+    });
+    document.getElementById('copyWechat').addEventListener('click', async function () {
+      const defaultText = document.body.dataset.lang === 'zh' ? this.dataset.zh : this.dataset.en;
+      try {
+        await navigator.clipboard.writeText('Expecto6atronum');
+        this.textContent = document.body.dataset.lang === 'zh' ? '已复制' : 'Copied';
+        setTimeout(() => this.textContent = defaultText, 1500);
+      } catch (error) {
+        this.textContent = 'Expecto6atronum';
+      }
+    });
+
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    document.querySelectorAll('[data-video]').forEach((button) => {
+      button.addEventListener('click', () => {
+        modalVideo.src = button.dataset.video;
+        videoModal.classList.add('open');
+        modalVideo.play().catch(() => {});
+      });
+    });
+    function closeVideo() {
+      modalVideo.pause();
+      modalVideo.removeAttribute('src');
+      modalVideo.load();
+      videoModal.classList.remove('open');
+    }
+    document.querySelector('[data-close-video]').addEventListener('click', closeVideo);
+    videoModal.addEventListener('click', (event) => {
+      if (event.target === videoModal) closeVideo();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        wechatModal.classList.remove('open');
+        closeVideo();
+      }
+    });
+  </script>
+</body>
+</html>
